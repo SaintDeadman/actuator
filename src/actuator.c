@@ -100,12 +100,11 @@ void actuator_init(actuator_ptr_t act, actuator_conf_hw* conf_hw) {
 	/* -------------init FSM ------------------ */
 	act->cur_state = STATE_IDLE;
 	CLEAR_SIGNAL(act, ACT_SIGNAL_POSITION_SETTING);
-	//CLEAR_SIGNAL(act, ACT_SIGNAL_CALIBRATED);
-	SET_SIGNAL(act, ACT_SIGNAL_CALIBRATED);
+	CLEAR_SIGNAL(act, ACT_SIGNAL_CALIBRATED);
 	SET_SIGNAL(act, ACT_SIGNAL_POSITION_UNDEF);
 	/*-----------init calibration --------------*/
 	act->calibration.iter = ACTUATOR_CALIBRATION_ITERATION;
-	act->calibration.l_len_avr = act->calibration.r_len_avr = 2000;
+	act->calibration.l_len_avr = act->calibration.r_len_avr = 0;
 	act->calibration.l_len_dispersion = act->calibration.r_len_dispersion = 1;
 
 	/*---------------------------*/

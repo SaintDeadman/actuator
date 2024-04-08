@@ -62,8 +62,8 @@ int main()
     actuator_conf_hw conf_hw = {
         .left_limited_switch  = &(switch_t){.GPIOx=GPIOA, .GPIO_Pin= GPIO_PIN_0, .active_lvl = GPIO_PIN_RESET},
         .left_moved_switch    = &(switch_t){.GPIOx=GPIOC, .GPIO_Pin= GPIO_PIN_13, .active_lvl = GPIO_PIN_RESET},
-        .right_limited_switch = &(switch_t){.GPIOx=GPIOA, .GPIO_Pin= GPIO_PIN_0, .active_lvl = GPIO_PIN_RESET},
-        .right_moved_switch   = &(switch_t){.GPIOx=GPIOC, .GPIO_Pin= GPIO_PIN_13, .active_lvl = GPIO_PIN_RESET} 
+        .right_limited_switch = &(switch_t){.GPIOx=GPIOA, .GPIO_Pin= GPIO_PIN_1, .active_lvl = GPIO_PIN_RESET},
+        .right_moved_switch   = &(switch_t){.GPIOx=GPIOC, .GPIO_Pin= GPIO_PIN_14, .active_lvl = GPIO_PIN_RESET} 
     };
 
     actuator_init(actuator, &conf_hw);
